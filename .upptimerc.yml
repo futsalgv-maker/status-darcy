@@ -83,3 +83,27 @@ status-website:
       href: /
     - title: Portal
       href: https://www.darcyribeiro.com.br
+
+# ── O AVISO POR E-MAIL ─────────────────────────────────────────────────
+# 24/08/2026 · POR QUE ISTO EXISTE: no primeiro teste o vigia detectou a
+# queda, abriu a issue e ATRIBUIU ao gestor — e nenhum aviso chegou. A
+# causa foi medida na API de notificações: a issue é aberta pelo robô
+# usando o `GH_PAT` DO PRÓPRIO GESTOR, e o GitHub não avisa ninguém das
+# ações que ele mesmo executou. Vigia que detecta e não avisa é enfeite.
+#
+# Esta lista é uma AUTORIZAÇÃO, não um lugar de guardar segredo: ela diz
+# quais variáveis o robô pode ler. Os valores moram em
+# Settings → Secrets and variables → Actions → Secrets (NUNCA em Variables,
+# e nunca neste arquivo — o repositório é PÚBLICO).
+#
+# Conferido na documentação oficial em 24/08/2026
+# (upptime.js.org/docs/notifications) — não escrito de memória.
+secrets:
+  - NOTIFICATION_EMAIL
+  - NOTIFICATION_EMAIL_FROM
+  - NOTIFICATION_EMAIL_TO
+  - NOTIFICATION_EMAIL_SMTP
+  - NOTIFICATION_EMAIL_SMTP_HOST
+  - NOTIFICATION_EMAIL_SMTP_PORT
+  - NOTIFICATION_EMAIL_SMTP_USERNAME
+  - NOTIFICATION_EMAIL_SMTP_PASSWORD
