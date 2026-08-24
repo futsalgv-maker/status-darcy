@@ -41,16 +41,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.darcyribeiro.com.br.ico",
     "slug": "controle-teste-do-vigia-endereco-inventado",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "61.13%",
+    "uptimeDay": "61.13%",
+    "uptimeWeek": "61.13%",
+    "uptimeMonth": "61.13%",
+    "uptimeYear": "61.13%",
     "time": 397,
     "timeDay": 397,
     "timeWeek": 397,
     "timeMonth": 397,
     "timeYear": 397,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-08-24": 0
+    }
   }
 ]
