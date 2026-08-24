@@ -40,16 +40,6 @@ sites:
     url: https://www.darcyribeiro.com.br/painel.html
     __dangerous__body_down_if_text_missing: Portal Educacional
 
-
-  # ── 3 · CONTROLE TEMPORÁRIO — 2ª rodada do teste negativo (24/08, tarde)
-  # A 1ª rodada provou que a issue abre. Não provou o aviso: medido na API,
-  # a issue NÃO gerou notificação nenhuma, porque quem a abre é o robô com o
-  # GH_PAT do próprio gestor — e o GitHub não avisa ninguém das ações que
-  # ele mesmo executou. Agora que o aviso por e-mail (SMTP) está configurado,
-  # esta rodada existe para provar a corrente inteira: queda → issue → E-MAIL.
-  # Sai assim que o gestor confirmar que a mensagem chegou.
-  - name: Controle do aviso
-    url: https://www.darcyribeiro.com.br/__teste_do_aviso_por_email__.html
 # ── quem é avisado ─────────────────────────────────────────────────────
 # O Upptime abre uma issue no repositório quando algo cai e a atribui a
 # estas pessoas; o GitHub manda o e-mail. ⚠️ Um nome só é um ponto único
