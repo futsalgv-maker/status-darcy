@@ -48,7 +48,7 @@ sites:
   # ele mesmo executou. Agora que o aviso por e-mail (SMTP) está configurado,
   # esta rodada existe para provar a corrente inteira: queda → issue → E-MAIL.
   # Sai assim que o gestor confirmar que a mensagem chegou.
-  - name: CONTROLE 2 (teste do aviso por e-mail) - endereco inventado
+  - name: Controle do aviso
     url: https://www.darcyribeiro.com.br/__teste_do_aviso_por_email__.html
 # ── quem é avisado ─────────────────────────────────────────────────────
 # O Upptime abre uma issue no repositório quando algo cai e a atribui a
