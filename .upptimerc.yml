@@ -40,6 +40,14 @@ sites:
     url: https://www.darcyribeiro.com.br/painel.html
     __dangerous__body_down_if_text_missing: Portal Educacional
 
+
+  # ── 3 · CONTROLE TEMPORÁRIO — endereço que NÃO existe ────────────────
+  # ⚠️ ESTE BLOCO É TESTE E SAI DEPOIS. Existe para provar a corrente
+  # inteira — queda → issue no repositório → e-mail para o gestor —, que é
+  # a única parte que nenhuma medição minha alcança. É uma rota inventada
+  # no domínio da escola: o HostGator responde 404 a ela.
+  - name: CONTROLE (teste do vigia) - endereco inventado
+    url: https://www.darcyribeiro.com.br/__teste_do_vigia_nao_existe__.html
 # ── quem é avisado ─────────────────────────────────────────────────────
 # O Upptime abre uma issue no repositório quando algo cai e a atribui a
 # estas pessoas; o GitHub manda o e-mail. ⚠️ Um nome só é um ponto único
