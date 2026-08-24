@@ -1,31 +1,85 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# ═══════════════════════════════════════════════════════════════════════
+# UPPTIME — configuração PRONTA do vigia de queda do Portal Darcy
+#
+# 24/08/2026 · escrito para a decisão «principalmente o Upptime».
+#
+# O QUE É ISTO: o Upptime é um vigia de queda que roda DENTRO do GitHub —
+# de graça, para sempre, sem conta em serviço de terceiro e sem cláusula
+# de «uso pessoal». A cada 5 minutos o GitHub Actions pede os endereços
+# abaixo; caindo algum, ele ABRE UMA ISSUE no repositório e o GitHub
+# manda e-mail para quem estiver em `assignees`.
+#
+# COMO USAR: este arquivo vai para a RAIZ do repositório novo de status,
+# com o nome exato `.upptimerc.yml` (começa com ponto).
+# O passo a passo está em `00_documentacao/CHECKLIST_PROXIMA_JANELA.html`.
+#
+# ⚠️ AS CHAVES DESTE ARQUIVO FORAM CONFERIDAS NA DOCUMENTAÇÃO OFICIAL
+# em 24/08/2026 (upptime.js.org/docs/configuration) — não foram escritas
+# de memória. A que faz o trabalho de verdade é
+# `__dangerous__body_down_if_text_missing`: ela é o equivalente ao
+# «monitor de palavra-chave», e é o que impede o vigia de se contentar
+# com «HTTP 200» — a armadilha nº 1 deste projeto.
+# ═══════════════════════════════════════════════════════════════════════
+
+owner: futsalgv-maker          # ⬅ dono do repositório (medido no remote do Portal)
+repo: status-darcy             # ⬅ nome do repositório NOVO, público, só para isto
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  # ── 1 · O BANCO DE DADOS — este é o que importa ──────────────────────
+  # Endereço construído em 24/08 justamente para isto: ele só responde
+  # PORTAL_OK depois de ir ao banco e voltar. Banco fora → 503.
+  - name: Portal Darcy — banco de dados
+    url: https://athtkajuzvgkpbzgnoiu.supabase.co/functions/v1/saude
+    __dangerous__body_down_if_text_missing: PORTAL_OK
 
+  # ── 2 · O SITE — a porta da frente ───────────────────────────────────
+  # A palavra foi MEDIDA no HTML que o servidor realmente entrega
+  # (24/08: aparece 5 vezes, inclusive no <title>). Trocando o título da
+  # home, é esta linha que se corrige — não o site.
+  - name: Portal Darcy — site
+    url: https://www.darcyribeiro.com.br/painel.html
+    __dangerous__body_down_if_text_missing: Portal Educacional
+
+# ── quem é avisado ─────────────────────────────────────────────────────
+# O Upptime abre uma issue no repositório quando algo cai e a atribui a
+# estas pessoas; o GitHub manda o e-mail. ⚠️ Um nome só é um ponto único
+# de falha — acrescente um segundo assim que houver um segundo usuário.
+assignees:
+  - futsalgv-maker
+
+# ── de quanto em quanto tempo ──────────────────────────────────────────
+# 5 minutos é o mínimo que o agendador do GitHub Actions aceita, e é o
+# mesmo do plano grátis do UptimeRobot. O agendamento é «melhor esforço»:
+# em horário de pico o GitHub pode atrasar alguns minutos.
+workflowSchedule:
+  uptime: "*/5 * * * *"
+  responseTime: "0 23 * * *"
+  graphs: "0 0 * * *"
+  staticSite: "0 1 * * *"
+  summary: "0 1 * * *"
+  updates: "0 3 * * *"
+  updateTemplate: "0 0 * * 0"
+
+# ── a página pública de status ─────────────────────────────────────────
+# ⚠️ ELA É PÚBLICA e leva o nome da escola. É um efeito colateral bom
+# (a comunidade pode conferir se «o sistema está fora» é verdade), mas é
+# uma decisão do gestor, não minha — está escrita no checklist.
+# 📌 NOTA HONESTA: os rótulos da página saem em INGLÊS por padrão. O
+# Upptime tem uma chave `i18n` para traduzir, mas eu NÃO a preenchi aqui
+# porque não conferi os nomes das subchaves na documentação — e nesta
+# casa não se escreve configuração de memória. Fica para uma segunda
+# passada, depois que o vigia estiver funcionando.
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # ⚠️ SEM domínio próprio, o `baseUrl` é OBRIGATÓRIO e tem de ser o nome do
+  # repositório: a página mora em futsalgv-maker.github.io/status-darcy e, sem
+  # esta linha, o CSS e os links saem quebrados. O template vem com
+  # `cname: demo.upptime.js.org` — esse cname É DELES e tem de sair.
+  baseUrl: /status-darcy
+  name: Status do Portal Educacional
+  introTitle: Portal Educacional — E. E. Prof. Darcy Ribeiro
+  introMessage: Página automática de disponibilidade do Portal. Verificação a cada 5 minutos.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+    - title: Portal
+      href: https://www.darcyribeiro.com.br
