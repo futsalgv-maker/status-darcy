@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 1444,
-    "timeDay": 1444,
-    "timeWeek": 1444,
-    "timeMonth": 1444,
-    "timeYear": 1444,
+    "time": 1349,
+    "timeDay": 1349,
+    "timeWeek": 1349,
+    "timeMonth": 1349,
+    "timeYear": 1349,
     "dailyMinutesDown": {}
   },
   {
@@ -28,31 +28,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 820,
-    "timeDay": 820,
-    "timeWeek": 820,
-    "timeMonth": 820,
-    "timeYear": 820,
+    "time": 823,
+    "timeDay": 823,
+    "timeWeek": 823,
+    "timeMonth": 823,
+    "timeYear": 823,
     "dailyMinutesDown": {}
-  },
-  {
-    "name": "CONTROLE (teste do vigia) - endereco inventado",
-    "url": "https://www.darcyribeiro.com.br/__teste_do_vigia_nao_existe__.html",
-    "icon": "https://icons.duckduckgo.com/ip3/www.darcyribeiro.com.br.ico",
-    "slug": "controle-teste-do-vigia-endereco-inventado",
-    "status": "down",
-    "uptime": "61.13%",
-    "uptimeDay": "61.13%",
-    "uptimeWeek": "61.13%",
-    "uptimeMonth": "61.13%",
-    "uptimeYear": "61.13%",
-    "time": 397,
-    "timeDay": 397,
-    "timeWeek": 397,
-    "timeMonth": 397,
-    "timeYear": 397,
-    "dailyMinutesDown": {
-      "2026-08-24": 0
-    }
   }
 ]
