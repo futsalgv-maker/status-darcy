@@ -22,17 +22,19 @@
     "url": "https://www.darcyribeiro.com.br/painel.html",
     "icon": "https://icons.duckduckgo.com/ip3/www.darcyribeiro.com.br.ico",
     "slug": "portal-darcy-site",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 1125,
-    "timeDay": 4957,
-    "timeWeek": 1542,
-    "timeMonth": 1125,
-    "timeYear": 1125,
-    "dailyMinutesDown": {}
+    "time": 1768,
+    "timeDay": 12365,
+    "timeWeek": 3821,
+    "timeMonth": 1768,
+    "timeYear": 1768,
+    "dailyMinutesDown": {
+      "2026-09-14": 0
+    }
   }
 ]
